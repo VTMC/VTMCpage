@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #title{
+                border:2px solid black;
+                border-radius:50px;
+                background:skyblue;
+                text-align: center;
+            }
+
+            #warningSentence{
+                color:red;
+                font-weight: bold;
+            }
+
+            #repo-list{
+                margin:0px;
+                border:3px solid skyblue;
+            }
+
+            #repo-list li{
+                width:100%;
+                list-style: none;
+                border-bottom:1px solid black;
+                
+            }
+
+            #repo-list li a{
+                text-decoration: none;
+                color:black;
+                border: 1px solid black;
+                padding: 0 10px;
+                font-weight: bold;
+            }
+
+            #repo-list li a:hover{
+                color:aqua;
+                background: black;
+                transition:0.5s;
+            }
+
+            #repo-list li img{
+                padding: 0 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="title">
+            <h2>SOFTWARE</h2>
+        </div>
+        
+        <p>if you want to check the project of VTMC software, click below link.</p>
+        <a href="https://github.com/VTMC" target="_blank">VTMC's Github</a>
+
+        <br><br>
+        <b>VTMC 깃허브 목록</b>
+        <p id="warningSentence"><span style="font-size: xx-large;">※</span>목록이 뜨지 않을 경우 깃허브에서의 접속 제한으로 인해 생긴 오류입니다.</p>
+        
+        <ul id="repo-list"></ul>
+        <script>
+            fetch('https://api.github.com/users/VTMC/repos')
+                .then(response => response.json())
+                .then(data => {
+                const repoList = document.getElementById("repo-list");
+                data.forEach(repo => {
+                    const repoItem = document.createElement("li");
+                    const repoLink = document.createElement("a");
+                    const socialPrevCard = document.createElement("img");
+                    const descElement = document.createElement("p");
+
+                    repoLink.textContent = repo.name;
+                    repoLink.href = repo.html_url;
+                    descElement.textContent = repo.description;
+
+                    // social preview 이미지 가져오기
+                    fetch(`https://api.github.com/repos/${repo.full_name}/topics`, {headers: {"Accept": "application/vnd.github.mercy-preview+json"}})
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data?.names?.includes('social-preview-image')) {
+                        socialPrevCard.src = `https://repository-images.githubusercontent.com/${repo.full_name}/master/${repo.name}.png`;
+                        } else {
+                        socialPrevCard.src = 'default-preview.png';
+                        }
+                    });
+
+                    repoItem.appendChild(repoLink);
+                    repoItem.appendChild(socialPrevCard);
+                    repoItem.appendChild(descElement);
+                    repoList.appendChild(repoItem);
+                    
+
+                    repoLink.setAttribute('target', '_blank');
+                    socialPrevCard.setAttribute('alt', '미리보기 이미지 없음');
+                });
+            });
+        </script>
+    </body>
+</html>

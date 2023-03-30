@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #title{
+                border:2px solid black;
+                border-radius:50px;
+                background:skyblue;
+                text-align: center;
+            }
+
+            embed{
+                width:100%;
+                height:1000px;
+            }
+
+            #inCoreCompentenciesDiv{
+                display:flex;
+                padding: 10px;
+                flex-direction:row;
+            }
+
+            #coreCompentencies{
+                width:100%;
+            }
+
+
+            #coreCompentenciesDownloader{
+                text-decoration: none;
+                height:20px;
+                border:3px solid;
+            }
+
+            #coreCompentenciesDownloader:hover{
+                font-weight: bold;
+                color:black;
+                border: 3px solid #0099FF;
+                transition:0.2s;
+
+                box-shadow: 0 0 3px 3px skyblue;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+    </head>
+    <body>
+        <div id="title">
+            <h2>INTRODUCE</h2>
+        </div>
+
+        <article id="introduce">
+            <p>
+                안녕하세요. 저는 VTMC라는 닉네임을 사용하는 '김선민'입니다.
+                앞으로 많이 잘 부탁드리겠습니다.
+            </p>
+        </article>
+
+        <hr />
+        <article id="VTMC">
+            <h2>● VTMC</h2>
+            <p>
+            VTMC는 비타민C(ViTaMin C)의 줄임말로 어렸을 적에 어머니가 불러주신
+            별명인 '비타민'을 기반으로 만들어낸 닉네임 입니다.
+            </p>
+        </article>
+        
+        <hr />
+
+        <artitcle id="resume">
+            <h2>● 이력서</h2>
+            <p> - 2022/03/29 작성</p>
+            <embed id="resumeFrame" src="https://drive.google.com/file/d/1kpnuo6m6gRfNmF7v8XMQIUGYr65DmqCp/preview" width="100%" height="600px">
+        </artitcle>
+        <hr />
+
+        <article id="selfIntroduce">
+            <h2>● 자기소개서</h2>
+            <p> - 2022/10/14 작성</p>
+            <embed id="selfIntFrame" src="https://drive.google.com/file/d/1aR03gnbJFMPY0f6bj881QVy_A56Ibygn/preview" width="100%" height="600px">
+        </article>
+        <hr />
+
+        <artice id="coreCompentenciesDiv">
+            <h2>● 교내 핵심역량 진단검사</h2>
+            <div id="inCoreCompentenciesDiv">
+                <p style="padding:0 10px; margin:0;"> - 2023/03/29 참여</p>
+                <a id="coreCompentenciesDownloader" href="files/HallymBecome_coreCompentencies_20230329.png" download>이미지 다운로드</a>
+            </div>
+            <img id="coreCompentencies" src="files/HallymBecome_coreCompentencies_20230329.png"/>
+        </artice>
+        <hr />
+
+    </body>
+</html>
