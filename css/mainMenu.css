@@ -1,0 +1,57 @@
+*{
+    background-color: skyblue;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+ul{
+    margin:0;        
+    padding:0;
+    list-style-type: none;
+}
+
+li{            
+    width:100%;
+    border:1px solid black;
+    margin: 10px 0px;
+}
+
+li:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
+a{
+    text-decoration: none; color:black;
+}
+
+p{
+    width:100%;
+    margin:0
+}
+
+p:hover{
+    background-color:black;
+    text-decoration: none; color: white;
+    transition: 0.5s;
+}
+     
+/*@media (max-width:700px){
+    *{
+        padding:0;
+        margin:0;
+    }
+    p{
+        font-size:90%;
+    }
+    h4{
+        visibility:hidden;
+        height:0px;
+    }
+
+    li{                
+        display:inline-block;
+        padding:0 10px;
+    }
+}*/

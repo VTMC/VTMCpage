@@ -1,0 +1,91 @@
+body{
+    background-color: darkblue;
+    background-image: url("files/background_image.JPG"); /* ◀ 파일 적용이 안 됨.*/
+    background-size: 100px 100px;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+header, footer{
+    font-family:Serif;
+    font-weight:200px;
+}
+
+iframe{
+    border:0;
+}
+
+header{
+    width:100%;
+    text-align: center;
+    background-color: #0099FF;
+    margin:0;
+    padding:0;
+}
+
+header img{
+    height:20%
+}
+
+#mainSection{
+    width:100%;
+    display:inline;
+    padding:0px;
+    margin:0px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#mainSection .left{
+    border:3px solid black;
+}
+
+.left{
+    width:10%;
+    height:75%;
+    background:white;
+}
+
+.right{
+    width:88%;
+    height:75%;
+    background: white;
+}
+
+
+footer{
+    width:100%;
+    background-color: 0099FF;
+}
+
+table{
+    width:100%;
+    background-color:skyblue
+}
+
+#footerTable_1{
+    text-align: left;
+}
+
+#footerTable_2{
+    text-align: center;
+}
+
+/*0~700px*/
+/*@media (max-width:700px){
+    *{
+        padding:0;
+        margin:0;
+    }
+
+    #leftWindow{
+        width:100%;
+        height:8%;
+    }
+
+    #rightWindow{
+        width:100%;
+    }
+}*/
