@@ -104,15 +104,15 @@ table{
     #mobileMenu{
         opacity: 1;
 
-        width:100%;
+        width:80%;
+        height:auto;
 
         display:inline-table;
     }
 
     #mobileMenu img{
-        width:100% 0;
-        height:300px;
-
+        width:50%;
+        height:50%;
     }
 
     #mobileMenu:hover body{
@@ -144,7 +144,7 @@ table{
         background:white;
         position:static;
 
-        font-size:xx-large;
+        font-size:4em;
     }
 
     #mobileSubMenu li a{
