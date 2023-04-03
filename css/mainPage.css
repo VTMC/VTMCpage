@@ -86,7 +86,7 @@ table{
     text-align: center;
 }
 
-/*700px~1500px*/
+/*~1500px*/
 @media screen and (max-width:1500px){
     *{
         padding:0;
@@ -110,15 +110,15 @@ table{
         display:inline-table;
     }
 
+    #mobileMenu li{
+        height:0;
+    }
+
     #mobileMenu h1{
         font-size:3em;
         width:100%;
 
         padding: 10% 0;
-    }
-
-    #mobileMenu:hover body{
-        background: #0099FF;
     }
 
     #mobileMenu:hover #mobileSubMenu{
@@ -139,6 +139,10 @@ table{
         padding:0px;
 
         transition:0.3s;
+    }
+
+    #mobileMenu:hover li{
+        height:auto;
     }
 
     #mobileSubMenu li{
