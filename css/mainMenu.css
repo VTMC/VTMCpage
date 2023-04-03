@@ -28,7 +28,7 @@ a{
 
 p{
     width:100%;
-    margin:0
+    margin:0;
 }
 
 p:hover{
@@ -36,22 +36,3 @@ p:hover{
     text-decoration: none; color: white;
     transition: 0.5s;
 }
-     
-/*@media (max-width:700px){
-    *{
-        padding:0;
-        margin:0;
-    }
-    p{
-        font-size:90%;
-    }
-    h4{
-        visibility:hidden;
-        height:0px;
-    }
-
-    li{                
-        display:inline-block;
-        padding:0 10px;
-    }
-}*/
