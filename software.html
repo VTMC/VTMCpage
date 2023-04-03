@@ -15,6 +15,7 @@
             }
 
             #repo-list{
+                height:max-content;
                 margin:0px;
                 border:3px solid skyblue;
             }
@@ -22,8 +23,7 @@
             #repo-list li{
                 width:100%;
                 list-style: none;
-                border-bottom:1px solid black;
-                
+                border-bottom:3px dotted black;
             }
 
             #repo-list li a{
@@ -42,6 +42,47 @@
 
             #repo-list li img{
                 padding: 0 10%;
+            }
+
+            @media screen and (max-width:700px){
+                body{
+                    text-align:center;
+                    padding-bottom: 50px;
+                }
+
+                iframe{
+                    height:50%;
+                }
+
+                p{
+                    font-size:25px;
+                    font-weight:bold;
+                }
+
+                a{
+                    border: 5px solid;
+                    border-radius:50px;
+
+                    text-decoration: none;
+                    padding:10px;
+                    color:black;
+                }
+
+                a:hover{
+                    color:#0099FF;
+                    background:black;
+                    transition:0.3s;
+                }
+
+                #repo-list li{
+                    height:20%;
+                    padding: 10px 0px;
+                }
+
+                #repo-list li a{
+                    font-size:30px;
+                    margin: 10%;
+                }
             }
         </style>
     </head>
