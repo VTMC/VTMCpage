@@ -112,10 +112,10 @@ table{
     }
 
     #mobileMenu img{
-        width:50px;
+        width:30%;
         height:20%;
 
-        padding:40px;
+        padding:20%;
     }
 
     #mobileMenu:hover body{
