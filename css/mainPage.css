@@ -87,7 +87,7 @@ table{
 }
 
 /*700px~1500px*/
-@media screen and (min-width:700px) and (max-width:1500px){
+@media screen and (max-width:1500px){
     *{
         padding:0;
         margin:0;
@@ -103,18 +103,16 @@ table{
 
     #mobileMenu{
         opacity: 1;
-        float:right;
 
-        width:30%;
+        width:100%;
 
         display:inline-table;
     }
 
     #mobileMenu img{
-        width:30%;
-        height:20%;
+        width:100% 0;
+        height:300px;
 
-        padding:20%;
     }
 
     #mobileMenu:hover body{
@@ -145,6 +143,8 @@ table{
         display:block;
         background:white;
         position:static;
+
+        font-size:xx-large;
     }
 
     #mobileSubMenu li a{
@@ -170,88 +170,4 @@ table{
     }
 
     
-}
-
-/*0 ~ 700px*/
-@media screen and (max-width:700px){
-    *{
-        padding:0;
-        margin:0;
-    }
-
-    header{
-        height:auto;
-    }
-
-    header img{
-        height:30%;
-    }
-
-    #mobileMenu{
-        opacity: 1;
-        float:right;
-
-        width:50%;
-
-        display:inline-table;
-    }
-
-    #mobileMenu img{
-        width:20%;
-        height:50%;
-
-        padding:20%;
-    }
-
-    #mobileMenu:hover body{
-        background: #0099FF;
-    }
-
-    #mobileMenu:hover #mobileSubMenu{
-        opacity: 1;
-        height:auto;
-
-        border:3px solid;
-
-        color:black;
-        transition:0.3s;
-    }
-
-    #mobileMenu:hover img{
-        border: 3px solid black;
-        border-radius: 10px;
-        background:blue;
-
-        padding:0px;
-
-        transition:0.3s;
-    }
-
-    #mobileSubMenu li{
-        display:block;
-        background:white;
-        position:static;
-    }
-
-    #mobileSubMenu li a{
-        text-decoration: none;
-    }
-
-    #mobileSubMenu li:hover{
-        background:black;
-    }
-
-    #mobileSubMenu li:hover a{
-        color:white;
-    }
-
-    #leftWindow{
-        opacity: 0;
-        height:0;
-        width:0;
-    }
-
-    #rightWindow{
-        width:100%;
-    }
 }
