@@ -106,7 +106,7 @@ table{
         float:right;
 
         width:40%;
-        height:auto;
+        height:max-content;
 
         display:inline-table;
     }
