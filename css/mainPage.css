@@ -8,8 +8,11 @@ body{
 
 #mobileMenu{
     opacity:0;
+    visibility:hidden;
+
     padding:0;
     margin:0;
+
     width:0;
     height:0;
 }
@@ -30,14 +33,17 @@ iframe{
 
 header{
     width:100%;
+    height:30%;
+
     text-align: center;
     background-color: #0099FF;
+
     margin:0;
     padding:0;
 }
 
 header img{
-    height:20%
+    height:100%
 }
 
 #mainSection{
@@ -109,24 +115,27 @@ footer hr{
 }
 
 /*~1500px*/
-@media screen and (max-width:1500px){
+@media screen and (max-width:1120px){
     *{
         padding:0;
         margin:0;
     }
 
     header{
+        display:inline-block;
         height:auto;
-        display:block;
     }
 
     header img{
-        padding:1.5em;
+        width: 10em;
+        height: 10em;
+        padding: 2em;
     }
 
 
     #mobileMenu{
         opacity: 1;
+        visibility: visible;
 
         width:80%;
         height:auto;
@@ -222,8 +231,6 @@ footer hr{
         width:100%;
         margin: 5% 0;
     }
-
-    
 
     footer p{
         font-size: 2em;
